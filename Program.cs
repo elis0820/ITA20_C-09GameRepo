@@ -10,7 +10,7 @@ namespace ITA20_C_09GameRepo
 
         static void Main(string[] args)
         {
-            int scoreCounterUser = 0; //Reset score after game is over.
+            int scoreCounterUser = 0;                                                    //Reset score after game is over.
             int scoreCounterComputer = 0;
 
 
@@ -26,7 +26,7 @@ namespace ITA20_C_09GameRepo
                     Console.WriteLine("What is your choice [-r- for rock, -p- for paper or -s- for scissors]:");
                     keyLetter = Console.ReadLine();
 
-                    if (keyLetter == "r")                       //Convert from letter to number.
+                    if (keyLetter == "r")                                               //Convert from letter to number.
                     {
                         userAnswer = 1;
                     }
@@ -48,7 +48,7 @@ namespace ITA20_C_09GameRepo
                             if (userAnswer > computerAnswer)
                             {
                                 Console.WriteLine("YOU won! ");
-                                int score = scoreCounterUser++;                 //Scorecounter
+                                int score = scoreCounterUser++;                           //Scorecounter
                             }
                             else if (userAnswer < computerAnswer)
                             {
@@ -65,7 +65,7 @@ namespace ITA20_C_09GameRepo
                                 Console.ReadKey();
                             }
                         }
-                        else if (computerAnswer == 3)            //OBS! 2>1 3>2 but 1>3(3<1) Sign inversed
+                        else if (computerAnswer == 3)                                   //OBS! 2>1 3>2 but 1>3(3<1) Sign inversed
                         {
                             if (userAnswer < computerAnswer)
                             {
@@ -97,9 +97,12 @@ namespace ITA20_C_09GameRepo
 
                     }
                 }
-                else if (keyLetter == "q")                              //Possible to get out of the loop, quit
+                else if (keyLetter == "q")                                              //Possible to get out of the loop, quit
                 {
-                    Console.WriteLine("\nThis is the final score... (drum roll...) ");
+                    Console.WriteLine("\nThis is the final result. Did you win...or the computer?... (drum roll...) ");
+                    System.Threading.Thread.Sleep(1700);                                //Paus, delay before final answer                  
+                    Console.WriteLine("\nYour points: " + scoreCounterUser + " Computers points: " + scoreCounterComputer);
+                    Console.WriteLine("\nThank you for playing! Bye & have a nice day! Press any key to finish.");
                     Console.ReadKey();
                     Environment.Exit(0);
                 }
