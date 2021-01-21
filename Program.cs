@@ -22,11 +22,21 @@ namespace ITA20_C_09GameRepo
 
                 if (keyLetter == "y")
                 {
-                    Console.WriteLine("What is your choice [-1- for rock, -2- for paper or -3- for scissors]:");
+                    Console.WriteLine("What is your choice [-r- for rock, -p- for paper or -s- for scissors]:");
                     keyLetter = Console.ReadLine();
 
-
-                        //OBS! 2>1 3>2 men 1>3(3<1)
+                    if (keyLetter == "r")
+                    {
+                        userAnswer = 1;
+                    }
+                    else if (keyLetter == "p")
+                    {
+                        userAnswer = 2;
+                    }
+                    else
+                    {
+                        userAnswer = 3;
+                    }
 
                     Console.WriteLine("Let's see who won! [press g for go]."); 
                     keyLetter = Console.ReadLine();
