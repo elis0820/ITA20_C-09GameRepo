@@ -6,11 +6,12 @@ namespace ITA20_C_09GameRepo
     {
         static int computerAnswer;
         static int userAnswer;
-        static string keyLetter;  
+        static string keyLetter;
 
         static void Main(string[] args)
         {
-
+            int scoreCounterUser = 0; //Reset score after game is over.
+            int scoreCounterComputer = 0;
 
 
             do
@@ -25,7 +26,7 @@ namespace ITA20_C_09GameRepo
                     Console.WriteLine("What is your choice [-r- for rock, -p- for paper or -s- for scissors]:");
                     keyLetter = Console.ReadLine();
 
-                    if (keyLetter == "r")
+                    if (keyLetter == "r")                       //Convert from letter to number.
                     {
                         userAnswer = 1;
                     }
@@ -38,7 +39,7 @@ namespace ITA20_C_09GameRepo
                         userAnswer = 3;
                     }
 
-                    Console.WriteLine("Let's see who won! [press g for go]."); 
+                    Console.WriteLine("Let's see who won! [press g for go].");
                     keyLetter = Console.ReadLine();
                     if (keyLetter == "g")
                     {
@@ -47,10 +48,12 @@ namespace ITA20_C_09GameRepo
                             if (userAnswer > computerAnswer)
                             {
                                 Console.WriteLine("YOU won! ");
+                                int score = scoreCounterUser++;                 //Scorecounter
                             }
                             else if (userAnswer < computerAnswer)
                             {
                                 Console.WriteLine("Sorry, computer won. ");
+                                int score = scoreCounterComputer++;
                             }
                             else if (userAnswer == computerAnswer)
                             {
@@ -67,10 +70,12 @@ namespace ITA20_C_09GameRepo
                             if (userAnswer < computerAnswer)
                             {
                                 Console.WriteLine("YOU won! ");
+                                int score = scoreCounterUser++;
                             }
                             else if (userAnswer > computerAnswer)
                             {
                                 Console.WriteLine("Sorry, computer won. ");
+                                int score = scoreCounterComputer++;
                             }
                             else if (userAnswer == computerAnswer)
                             {
@@ -88,6 +93,7 @@ namespace ITA20_C_09GameRepo
                             Console.ReadKey();
                         }
 
+                        Console.WriteLine("you have " + scoreCounterUser + ", computer have " + scoreCounterComputer);      // Telling the result from the scorecounter.
 
                     }
                 }
