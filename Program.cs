@@ -93,15 +93,30 @@ namespace ITA20_C_09GameRepo
                             Console.ReadKey();
                         }
 
-                        Console.WriteLine("you have " + scoreCounterUser + ", computer have " + scoreCounterComputer);      // Telling the result from the scorecounter.
 
                     }
                 }
                 else if (keyLetter == "q")                                              //Possible to get out of the loop, quit
                 {
-                    Console.WriteLine("\nThis is the final result. Did you win...or the computer?... (drum roll...) ");
-                    System.Threading.Thread.Sleep(1700);                                //Paus, delay before final answer                  
-                    Console.WriteLine("\nYour points: " + scoreCounterUser + " Computers points: " + scoreCounterComputer);
+                    Console.WriteLine("\nThis is the final result:  -'Did you win...or the computer?'... (drum roll...) ");
+                    Console.WriteLine();
+                    System.Threading.Thread.Sleep(2300);                                //Paus, delay before final answer                  
+                                                                                        //Console.WriteLine("\nYour points: " + scoreCounterUser + " Computers points: " + scoreCounterComputer);
+
+                    if (scoreCounterUser > scoreCounterComputer)
+                    {
+                        Console.WriteLine("\nYour points - Computers points:     " + scoreCounterUser + " - " + scoreCounterComputer + "     - 'YOU won! Congrats!!' ");
+                    }
+                    else if (scoreCounterUser < scoreCounterComputer)
+                    {
+                        Console.WriteLine("\nYour points - Computers points:     " + scoreCounterUser + " - " + scoreCounterComputer + "     - 'Meh!  (= Computer won)' ");
+                    }
+                    else if (scoreCounterUser == scoreCounterComputer)
+                    {
+                        Console.WriteLine("\nYour points - Computers points:     " + scoreCounterUser + " - " + scoreCounterComputer + "     - 'Boring!! ...Draw.' ");
+                    }
+
+                    Console.WriteLine();
                     Console.WriteLine("\nThank you for playing! Bye & have a nice day! Press any key to finish.");
                     Console.ReadKey();
                     Environment.Exit(0);
