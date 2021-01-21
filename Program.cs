@@ -4,6 +4,10 @@ namespace ITA20_C_09GameRepo
 {
     class Program
     {
+        static int computerAnswer;
+        static int userAnswer;
+        static string keyLetter;  
+
         static void Main(string[] args)
         {
 
@@ -11,94 +15,93 @@ namespace ITA20_C_09GameRepo
 
             do
             {
-                Console.WriteLine("Please, enter the name of the product article you want to add (if you want to add some): \nWhen you are finished or just want to finish off, please, type -f- for finished\n");
+                computerAnswer = RandomComputerAnswer();
+
+                Console.WriteLine("\nDo you want to play/ do you want another try [y for yes]? or Do you want to quit [q]?: ");
+                keyLetter = Console.ReadLine();
+
+                if (keyLetter == "y")
+                {
+                    Console.WriteLine("What is your choice [-1- for rock, -2- for paper or -3- for scissors]:");
+                    keyLetter = Console.ReadLine();
 
 
                         //OBS! 2>1 3>2 men 1>3(3<1)
 
-
-
-            Console.WriteLine("Do you want another try [y/n]: ");                 //Om spelarens svar är ja på nytt försök, omslag.
-            keybLetter = Console.ReadLine();
-            {
-                if (keybLetter == "y")
-                {
-                    Console.WriteLine("This is your new tot roll: " + retotdice_usrResultSum);
-                    Console.WriteLine();
-                    Console.WriteLine("Let's see who won! [press g]");            //Början på svar om vem som vann
-                    keybLetter = Console.ReadLine();
-                    if (keybLetter == "g")
-                    {                                            //lite fusk, ...lite lat... har eg inte tydliggjort villkor för att gå vidare, dvs else                               
-                        Console.WriteLine();
-
-                        if (retotdice_usrResultSum > totdice_cmptrResultSum)
+                    Console.WriteLine("Let's see who won! [press g for go]."); 
+                    keyLetter = Console.ReadLine();
+                    if (keyLetter == "g")
+                    {
+                        if (computerAnswer == 1 || computerAnswer == 2)
                         {
-                            Console.WriteLine("YOU won! ");
+                            if (userAnswer > computerAnswer)
+                            {
+                                Console.WriteLine("YOU won! ");
+                            }
+                            else if (userAnswer < computerAnswer)
+                            {
+                                Console.WriteLine("Sorry, computer won. ");
+                            }
+                            else if (userAnswer == computerAnswer)
+                            {
+                                Console.WriteLine("Both won! ...Draw. ");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Something must have gone wonky? [press any key() to try again]:");   //If unsuspected action, redo
+                                Console.ReadKey();
+                            }
                         }
-                        else if (retotdice_usrResultSum < totdice_cmptrResultSum)
+                        else if (computerAnswer == 3)            //OBS! 2>1 3>2 but 1>3(3<1) Sign inversed
                         {
-                            Console.WriteLine("Sorry, computer won. ");
-                        }
-                        else if (retotdice_usrResultSum == totdice_cmptrResultSum)
-                        {
-                            Console.WriteLine("Sorry, computer won, just kiddin' ...Draw. ");
+                            if (userAnswer < computerAnswer)
+                            {
+                                Console.WriteLine("YOU won! ");
+                            }
+                            else if (userAnswer > computerAnswer)
+                            {
+                                Console.WriteLine("Sorry, computer won. ");
+                            }
+                            else if (userAnswer == computerAnswer)
+                            {
+                                Console.WriteLine("Both won! ...Draw. ");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Something must have gone wonky? [press any key() to try again]:");  //If unsuspected action, redo
+                                Console.ReadKey();
+                            }
                         }
                         else
                         {
-                            Console.WriteLine("Do you want to try again or stop? [press whatever key(s)]: ");   //Fråga för att gå vidare eller avsluta
-                            keybLetter = Console.ReadLine();
+                            Console.WriteLine("Something must have gone wonky? [press any key() to try again]:");   //If unsuspected action, redo
+                            Console.ReadKey();
                         }
+
+
                     }
                 }
-                else if (keybLetter == "n")                                   //Om spelaren svarar nej på omslag tärning (dvs. nytt försök)
+                else if (keyLetter == "q")                              //Possible to get out of the loop, quit
                 {
-                    Console.WriteLine();
-                    Console.WriteLine("Let's see who won! [press g]");
-                    keybLetter = Console.ReadLine();
-                    if (keybLetter == "g")
-
-                        if (totdice_usrResultSum > totdice_cmptrResultSum)        //Början på svar om vem som vann
-                        {
-                            Console.WriteLine("YOU won! ");
-                        }
-                        else if (totdice_usrResultSum < totdice_cmptrResultSum)
-                        {
-                            Console.WriteLine("Sorry, computer won. ");
-                        }
-                        else if (totdice_usrResultSum == totdice_cmptrResultSum)
-                        {
-                            Console.WriteLine("Sorry, computer won, just kiddin' ...Draw. ");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Do you want to try again (more fun, concuer the computer!) or stop? [press whatever key(s)]: ");   //Fråga för att gå vidare eller avsluta
-                            keybLetter = Console.ReadLine();
-                        }
+                    Console.WriteLine("\nThis is the final score... (drum roll...) ");
+                    Console.ReadKey();
+                    Environment.Exit(0);
                 }
-                else
+
+
+                static int RandomComputerAnswer()                                                       //Function/Method Slumpgenerator
                 {
-                    Console.WriteLine("Sorry, wrong letter, try again or stop? [press whatever key(s)]: ");     //Fråga för att gå vidare eller avsluta.  ([y/n]. (In case/when you want to stop or continue? [press c/s]): ")
-                    keybLetter = Console.ReadLine();
+                    Random computerSuggestion = new Random();
+                    int computer_Answer = computerSuggestion.Next(1, 4);
+
+                    return computer_Answer;
                 }
-            }
-            Console.ReadKey();
-        }
-
-
-
 
 
             }
-            while (productArticleorKeyboardletter != "f");
+            while (keyLetter != "q");
             Console.ReadLine();
 
-        static int Playdice()                                                       //Funktion/Metod Slumpgeneratorn
-        {
-            Random dicedotSuggester = new Random();
-            int dice_Result = dicedotSuggester.Next(1, 7);
-
-            return dice_Result;
-        }
 
 
 
