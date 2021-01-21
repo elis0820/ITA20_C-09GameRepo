@@ -1,0 +1,16 @@
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\bin\BNB\Debug\net5.0\ITA20_C-09GameRepo.exe
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\bin\BNB\Debug\net5.0\ITA20_C-09GameRepo.deps.json
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\bin\BNB\Debug\net5.0\ITA20_C-09GameRepo.runtimeconfig.json
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\bin\BNB\Debug\net5.0\ITA20_C-09GameRepo.runtimeconfig.dev.json
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\bin\BNB\Debug\net5.0\ITA20_C-09GameRepo.dll
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\bin\BNB\Debug\net5.0\ref\ITA20_C-09GameRepo.dll
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\bin\BNB\Debug\net5.0\ITA20_C-09GameRepo.pdb
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ITA20_C-09GameRepo.csprojAssemblyReference.cache
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ITA20_C-09GameRepo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ITA20_C-09GameRepo.AssemblyInfoInputs.cache
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ITA20_C-09GameRepo.AssemblyInfo.cs
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ITA20_C-09GameRepo.csproj.CoreCompileInputs.cache
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ITA20_C-09GameRepo.dll
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ref\ITA20_C-09GameRepo.dll
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ITA20_C-09GameRepo.pdb
+C:\Users\Elin\GitHub\ITA20_C-09GameRepo\obj\BNB\Debug\net5.0\ITA20_C-09GameRepo.genruntimeconfig.cache

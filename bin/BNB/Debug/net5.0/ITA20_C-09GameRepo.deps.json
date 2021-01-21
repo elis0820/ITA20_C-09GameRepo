@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ITA20_C-09GameRepo/1.0.0": {
+        "runtime": {
+          "ITA20_C-09GameRepo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ITA20_C-09GameRepo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
